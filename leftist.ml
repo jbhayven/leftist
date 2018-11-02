@@ -63,7 +63,7 @@ exception Empty
 (*  ...lub wyjątek, gdy kolejka jest pusta.     *)
 let delete_min = function
     | EmptyQueue -> raise Empty
-    | Node {left; priority; right} -> (priority, join left right)
+    | Node {left; priority; right} -> priority, join left right
 
 (*  Dodaje do kolejki "q" element o priorytecie "x".    *)
 let add x q =
