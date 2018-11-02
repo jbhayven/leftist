@@ -1,8 +1,8 @@
 (*  Autor kodu: Przemysław Podleśny *)
 (*  Code reviewer: Jakub Nowak      *)
 
-(*  Korzeń kolejki priorytetowej - albo drzewo puste, albo
-    rekord postaci (lewy_syn, priorytet, wysokość, prawy_syn).  *)
+(*  Korzeń kolejki priorytetowej - albo drzewo puste,
+    albo rekord reprezentujący węzeł drzewa             *)
 type 'a queue =
     EmptyQueue |
     Node of {
