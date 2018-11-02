@@ -33,7 +33,7 @@ let make_node l priority r =
 (*  Porządkuje kolejki q1, q2 nierosnąco
     pod względem prawej wysokości ich korzeni.  *)
 let order_heights q1 q2 =
-    if height q1 >= height q2 then (q1, q2)
+    if height q1 >= height q2 then q1, q2
     else (q2, q1)
 
 (*  Pusta kolejka.  *)
