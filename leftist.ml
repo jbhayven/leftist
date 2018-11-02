@@ -53,7 +53,7 @@ let rec join q1 q2 =
         if prio1 > prio2 then join q2 q1 (* Niech prio1 < prio2. *)
         else (* d1 = q1, d2 = q2, zwracane jest d4. *)
             let d3 = join right q2
-            in let (l, r) = order_heights left d3
+            in let l, r = order_heights left d3
                 in make_node l prio1 r
 
 (*  Wyjątek zwracany przez delete_min, gdy kolejka jest pusta       *)
