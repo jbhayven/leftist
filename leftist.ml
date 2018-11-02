@@ -2,14 +2,16 @@
 (*  Code reviewer: Jakub Nowak      *)
 
 (*  Korzeń kolejki priorytetowej - albo drzewo puste,
-    albo rekord reprezentujący węzeł drzewa             *)
+    albo rekord reprezentujący węzeł drzewa;
+    left - lewy syn, priority - priorytet, right - prawy syn,
+    height - wysokość drzewa                                    *)
 type 'a queue =
-    EmptyQueue |
-    Node of {
-        left : 'a queue;
-        priority : 'a;
-        right : 'a queue;
-        height : int;
+    | EmptyQueue
+    | Node of {
+        left: 'a queue;
+        priority: 'a;
+        right: 'a queue;
+        height: int;
     }
 
 (*  Zwraca prawą wysokość wierzchołka "q"
