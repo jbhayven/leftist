@@ -47,14 +47,14 @@ let is_empty = function
 (*  Łączenie kolejek q1 i q2.   *)
 let rec join q1 q2 =
     match q1, q2 with (* Gdy jedna jest pusta, nie ma co łączyć.    *)
-    | EmptyQueue, _ -> q2
-    | _, EmptyQueue -> q1
     | Node {left; priority = prio1; right}, Node {priority = prio2} ->
         if prio1 > prio2 then join q2 q1 (* Niech prio1 < prio2. *)
         else (* d1 = q1, d2 = q2, zwracane jest d4. *)
             let d3 = join right q2
             in let l, r = order_heights left d3
                 in make_node l prio1 r
+    | EmptyQueue, _ -> q2
+    | _, EmptyQueue -> q1
 
 (*  Wyjątek zwracany przez delete_min, gdy kolejka jest pusta       *)
 exception Empty
