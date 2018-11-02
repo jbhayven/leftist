@@ -4,7 +4,7 @@
 (*  Korzeń kolejki priorytetowej - albo drzewo puste,
     albo rekord reprezentujący węzeł drzewa;
     left - lewy syn, priority - priorytet, right - prawy syn,
-    height - wysokość drzewa                                    *)
+    height - prawa wysokość drzewa                                    *)
 type 'a queue =
     | EmptyQueue
     | Node of {
