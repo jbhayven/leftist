@@ -23,7 +23,7 @@ let height = function
 (*  Tworzy drzewo o lewym synu w l,
     priorytecie priority i prawym synu w r. *)
 let make_node l priority r =
-    Node{
+    Node {
         left = l;
         priority = priority;
         right = r;
