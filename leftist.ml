@@ -2,7 +2,7 @@
 (*  Code reviewer: Jakub Nowak      *)
 
 (*  Korzeń kolejki priorytetowej - albo drzewo puste, albo
-    krotka postaci (lewy_syn, priorytet, wysokość, prawy_syn).  *)
+    rekord postaci (lewy_syn, priorytet, wysokość, prawy_syn).  *)
 type 'a queue =
     EmptyQueue |
     Node of {
@@ -54,7 +54,7 @@ let rec join q1 q2 =
             in let (l, r) = order_heights left d3
                 in make_node l prio1 r
 
-(*  Wyjątek zwracany przez delete_min, gdy kolejka jest pusta   *)
+(*  Wyjątek zwracany przez delete_min, gdy kolejka jest pusta       *)
 exception Empty
 
 (*  Zwraca parę (priorytet_korzenia, kolejka_po_usunięciu_korzenia) *)
