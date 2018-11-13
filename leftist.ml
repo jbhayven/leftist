@@ -1,10 +1,10 @@
 (*  Autor kodu: Przemysław Podleśny *)
 (*  Code reviewer: Jakub Nowak      *)
+
 (*  Korzeń kolejki priorytetowej - albo drzewo puste,
     albo rekord reprezentujący węzeł drzewa;
     left - lewy syn, priority - priorytet, right - prawy syn,
     height - prawa wysokość drzewa                                    *)
-
 type 'a queue =
     | EmptyQueue
     | Node of {
